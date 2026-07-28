@@ -24,10 +24,10 @@ export default function NewsletterSection() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-      <h3 className="font-serif text-3xl md:text-4xl text-brand-plum mb-4">Never Miss a New Drop</h3>
-      <p className="text-brand-plum/70 mb-8 max-w-lg mx-auto">
-        Be first to know when fresh wigs and units land, plus exclusive offers for our community.
+    <div className="text-center">
+      <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-plum mb-3 sm:mb-4 leading-snug">Stay Soft. Stay Ready.</h3>
+      <p className="text-brand-plum/70 mb-6 sm:mb-8 max-w-lg mx-auto text-sm sm:text-base">
+        Be first when new units land, the ones that make mornings feel easier and compliments feel natural.
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
         <input
@@ -36,14 +36,14 @@ export default function NewsletterSection() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email address"
-          className="flex-1 boutique-input !py-3.5 text-center sm:text-left"
+          className="flex-1 boutique-input !py-3.5 text-center sm:text-left min-h-[48px]"
         />
-        <button type="submit" disabled={isSubmitting} className="boutique-btn-primary disabled:opacity-70">
-          {isSubmitting ? 'Joining…' : 'Join the Crown List'}
+        <button type="submit" disabled={isSubmitting} className="boutique-btn-primary w-full sm:w-auto disabled:opacity-70 min-h-[48px]">
+          {isSubmitting ? 'Joining…' : 'Keep me in the glow'}
         </button>
       </form>
       {submitStatus === 'success' && (
-        <p className="mt-4 text-sm text-brand-sage font-medium">Welcome to the community!</p>
+        <p className="mt-4 text-sm text-brand-plum/70 font-medium">Welcome to the community!</p>
       )}
     </div>
   );

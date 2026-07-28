@@ -1,6 +1,6 @@
-# YOUR_PROJECT_NAME
+# Derby's Hair & Beauty
 
-> YOUR_PROJECT_DESCRIPTION
+> Ready-to-wear human hair wigs, bob units, pixie cuts and curly styles in Madina, Accra.
 
 ## Getting Started
 
@@ -17,9 +17,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Copy `.env.example` to `.env.local` and set your Supabase, Moolre, Resend, and app URL values.
 
-## Customization
+## Brand
 
-See [CUSTOMIZE.md](./CUSTOMIZE.md) and [public/ASSETS_GUIDE.md](./public/ASSETS_GUIDE.md).
+Identity lives in `lib/site-brand.ts`. Palette: Deep Plum `#4A183D`, Champagne Gold `#D8B06A`, Warm Ivory `#FFF8F2`, Charcoal `#1E1E1E`, Blush Pink `#E8C7CF`.
 
 ## Deployment
 

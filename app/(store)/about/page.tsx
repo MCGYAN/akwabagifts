@@ -5,7 +5,7 @@ import {
   SITE_TAGLINE,
   LOGO_PATH,
   BUSINESS_ADDRESS,
-  ABOUT_HEADLINE,
+  BUSINESS_COUNTRY,
   ABOUT_BODY,
   CONTACT_PHONE_DISPLAY,
   WHATSAPP_URL,
@@ -23,27 +23,27 @@ export default function AboutPage() {
 
   const values = [
     {
-      icon: 'ri-scissors-cut-line',
-      title: 'Expert Craft',
+      icon: 'ri-award-line',
+      title: 'Quality Human Hair',
       description:
-        'From custom builds to flawless installs, our team treats every unit like a crown, because that is exactly what it is.',
+        'We choose ready-to-wear human hair that moves like yours, soft, natural, and made to last beyond one event.',
     },
     {
-      icon: 'ri-vip-crown-line',
-      title: 'Premium Human Hair',
+      icon: 'ri-checkbox-circle-line',
+      title: 'Ready-to-Wear Confidence',
       description:
-        'Soft, natural-looking textures that photograph beautifully and feel even better in person. No compromises.',
+        'Bob units, pixies and curls styled so you can put them on and walk out feeling polished, no salon day required.',
     },
     {
       icon: 'ri-whatsapp-line',
       title: 'Easy Ordering',
       description:
-        `Call ${CONTACT_PHONE_DISPLAY} or message us on WhatsApp. We guide you from enquiry to delivery with zero stress.`,
+        `Call ${CONTACT_PHONE_DISPLAY} or message us on WhatsApp. We guide you from “which style?” to wearing it home with zero stress.`,
     },
     {
       icon: 'ri-truck-line',
-      title: 'Nationwide Delivery',
-      description: 'Based in Ghana with delivery across the country. Your crown arrives safely, beautifully packed.',
+      title: 'Madina Delivery & Pickup',
+      description: `Pickup near Ritz Hotel in Madina, or delivery across Accra and ${BUSINESS_COUNTRY}. Your wig arrives ready for you.`,
     },
   ];
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Our Story"
         title={`About ${SITE_NAME}`}
-        subtitle="Premium wigs and hair services for women who refuse to blend in."
+        subtitle="Hair that helps you feel like yourself again, soft, ready-to-wear human hair in Madina near Ritz Hotel."
       />
 
       <section className="py-20 bg-white overflow-hidden">
@@ -61,11 +61,9 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">Who We Are</h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
+                <p>{ABOUT_BODY}</p>
                 <p>
-                  <strong>{siteName}</strong> {ABOUT_BODY}
-                </p>
-                <p>
-                  We believe great hair is not a luxury, it is the confidence boost that changes how you walk into a room. That is the energy behind every wig, closure and service we offer.
+                  We exist for the quiet moment before you leave the house, when the hair feels right, your shoulders drop, and you finally recognise yourself again.
                 </p>
                 <div className="pt-4">
                   <Link
@@ -79,20 +77,20 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative mt-8 lg:mt-0">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative bg-brand-latte">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative bg-brand-cream flex items-center justify-center p-6 sm:p-10">
                 <img
                   src={LOGO_PATH}
                   alt={siteName}
-                  className="w-full h-full object-contain p-8"
+                  className="w-full h-full max-h-[320px] object-contain"
                 />
               </div>
               <div className="absolute -bottom-6 left-4 right-4 sm:right-auto sm:-left-6 bg-white p-5 sm:p-6 rounded-xl shadow-xl border border-gray-100 z-10">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600">
-                    <i className="ri-vip-crown-line text-xl sm:text-2xl"></i>
+                    <i className="ri-store-2-line text-xl sm:text-2xl"></i>
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 text-sm sm:text-base">Wear Your Crown</p>
+                    <p className="font-bold text-gray-900 text-sm sm:text-base">{SITE_TAGLINE}</p>
                     <p className="text-xs sm:text-sm text-gray-500">{BUSINESS_ADDRESS}</p>
                   </div>
                 </div>
@@ -105,25 +103,25 @@ export default function AboutPage() {
       <section id="our-story" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-pink-600 text-xs tracking-[0.24em] uppercase font-bold mb-3">What We Offer</span>
-          <h2 className="text-3xl md:text-4xl font-serif text-gray-900">More Than Just Hair</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-gray-900">What We Offer</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="bg-pink-50 p-10 rounded-3xl border border-pink-100">
             <div className="w-16 h-16 bg-pink-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg">
               <i className="ri-shopping-bag-3-line text-3xl text-white"></i>
             </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Wigs & Units</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready-to-Wear Wigs</h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Ready-made human-hair wigs, 4x4 and 5x5 closures, and 13x4 frontals, curated for natural movement, lasting quality and that expensive look.
+              Bob units, pixie cuts and curly wigs in quality human hair, ready the moment you put them on. Soft glam without the wait.
             </p>
           </div>
           <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200">
             <div className="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mb-8 shadow-lg">
-              <i className="ri-scissors-cut-line text-3xl text-white"></i>
+              <i className="ri-customer-service-2-line text-3xl text-white"></i>
             </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Services That Restore</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Order Your Way</h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Wig fixing, machine wig-making and revamps that bring tired units back to life. Book via WhatsApp and let us handle the rest.
+              WhatsApp us, call {CONTACT_PHONE_DISPLAY}, or walk in near Ritz Hotel in Madina. We make choosing, and wearing, your next look feel easy.
             </p>
           </div>
         </div>
@@ -132,8 +130,8 @@ export default function AboutPage() {
       <div className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Queens Choose {siteName}</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Real hair. Real results. Real confidence.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Women Choose {siteName}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Soft hair. Quiet confidence. A version of you that feels ready.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
@@ -151,26 +149,26 @@ export default function AboutPage() {
 
       <div className="bg-gradient-to-br from-pink-50 via-white to-pink-50 py-24 border-y border-pink-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-900">
-          <h2 className="text-4xl md:text-5xl font-serif mb-8">Ready to Wear Your Crown?</h2>
+          <h2 className="text-4xl md:text-5xl font-serif mb-8">Ready to Feel Like You Again?</h2>
           <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Browse our wigs and units, or message us on WhatsApp for a custom order. Your best hair day starts here.
+            Browse our styles, or WhatsApp us, leave feeling like yourself again, only softer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center gap-3 bg-pink-600 text-white px-10 py-5 rounded-full font-bold text-lg transition-colors shadow-lg hover:bg-pink-700 hover:shadow-xl transform hover:-translate-y-1 transition-all"
+              className="inline-flex items-center justify-center gap-3 bg-brand-plum text-brand-cream px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:bg-[#5C2349] hover:shadow-xl transform hover:-translate-y-1 transition-all"
             >
-              Shop Now
+              Find your look
               <i className="ri-arrow-right-line"></i>
             </Link>
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 border-2 border-gray-900 text-gray-900 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-900 hover:text-white transition-all"
+              className="inline-flex items-center justify-center gap-3 border-2 border-brand-plum text-brand-plum px-10 py-5 rounded-full font-bold text-lg hover:bg-brand-plum hover:text-brand-cream transition-all"
             >
               <i className="ri-whatsapp-line"></i>
-              WhatsApp Us
+              WhatsApp to order
             </a>
           </div>
         </div>

@@ -20,10 +20,10 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#E3187D',
+  themeColor: '#4A183D',
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://example.com';
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://derbyshairandbeauty.com';
 
 // Favicon & OG assets from public
 export const metadata: Metadata = {
@@ -33,7 +33,14 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  keywords: [SITE_NAME, 'wigs Ghana', 'human hair', 'lace front', 'wig fixing', BUSINESS_CITY].filter(Boolean),
+  keywords: [
+    SITE_NAME,
+    'human hair wigs Madina',
+    'bob units Accra',
+    'pixie cut wig',
+    'curly wigs Ghana',
+    BUSINESS_CITY,
+  ].filter(Boolean),
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
@@ -111,12 +118,12 @@ export default function RootLayout({
     <html lang="en-GH">
       <head>
         {/* PWA Meta Tags */}
-        <meta name="theme-color" content="#E3187D" />
+        <meta name="theme-color" content="#4A183D" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content={SITE_NAME} />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#E3187D" />
+        <meta name="msapplication-TileColor" content="#4A183D" />
         <meta name="msapplication-tap-highlight" content="no" />
 
         {/* FAVICON, add /public/favicon.ico and /public/apple-touch-icon.png */}

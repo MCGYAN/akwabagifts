@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       };
     }
 
-    const title = `${product.name} - ${SITE_NAME}`;
+    const title = `${product.name} | ${SITE_NAME}`;
     const description = (product.description || `Shop ${product.name} at ${SITE_NAME}.`).slice(0, 155);
     const image = product.product_images?.[0]?.url || `${siteUrl}/opengraph-image`;
 

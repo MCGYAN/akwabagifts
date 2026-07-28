@@ -32,7 +32,7 @@ export default function PWASplash() {
         <img
           src={LOGO_PATH}
           alt={SITE_NAME}
-          className="w-48 max-w-[80vw] h-auto object-contain"
+          className="w-64 sm:w-72 max-w-[85vw] h-auto object-contain"
         />
       </div>
       <h1 className="text-brand-cream text-xl font-bold font-serif mb-2">{SITE_NAME}</h1>

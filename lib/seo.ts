@@ -1,23 +1,24 @@
 import {
   SITE_NAME,
   SITE_DESCRIPTION,
+  SITE_TAGLINE,
   BUSINESS_CITY,
   BUSINESS_COUNTRY,
   OG_IMAGE_PATH,
 } from '@/lib/site-brand';
 import type { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://hairreignsgh.com';
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://derbyshairandbeauty.com';
 
 export const SEO_KEYWORDS = [
-  'human hair wigs Ghana',
-  'lace front wigs Ghana',
-  'closure units Ghana',
-  'frontal units Ghana',
-  'custom wigs Ghana',
-  'wig fixing Ghana',
-  'wig revamp Ghana',
-  'Hair Reigns GH',
+  'human hair wigs Madina',
+  'bob units Accra',
+  'pixie cut wig Ghana',
+  'curly wigs Accra',
+  'ready to wear wigs Ghana',
+  "Derby's Hair and Beauty",
+  'wigs near Ritz Hotel Madina',
+  'WhatsApp wig order Accra',
   BUSINESS_CITY,
   BUSINESS_COUNTRY,
 ].filter(Boolean);
@@ -66,32 +67,32 @@ export function buildPageMetadata({
 export const pageSeoTemplates = {
   home: () =>
     buildPageMetadata({
-      title: `${SITE_NAME} | Premium Wigs & Hair Services in Ghana`,
+      title: `${SITE_NAME} | Ready-to-Wear Human Hair Wigs in Madina`,
       description: SITE_DESCRIPTION,
       path: '/',
     }),
   shop: () =>
     buildPageMetadata({
-      title: `Shop Wigs & Hair | ${SITE_NAME}`,
-      description: `Browse human-hair wigs, closures, frontals and services at ${SITE_NAME}. Order via WhatsApp.`,
+      title: `Shop Wigs & Units | ${SITE_NAME}`,
+      description: `Browse bob units, pixie cuts, curly wigs and ready-to-wear human hair at ${SITE_NAME}. Order via WhatsApp.`,
       path: '/shop',
     }),
   categories: () =>
     buildPageMetadata({
       title: `Categories | ${SITE_NAME}`,
-      description: `Shop ready-made wigs, closure units, frontal units and custom services at ${SITE_NAME}.`,
+      description: `Shop bob units, pixies, curly styles and ready-to-wear wigs at ${SITE_NAME}.`,
       path: '/categories',
     }),
   about: () =>
     buildPageMetadata({
       title: `About | ${SITE_NAME}`,
-      description: `Meet ${SITE_NAME}, Ghana's destination for premium wigs, closures, frontals and expert hair services.`,
+      description: `Meet ${SITE_NAME} in Madina near Ritz Hotel, ready-to-wear human hair that helps you feel confident every day. ${SITE_TAGLINE}`,
       path: '/about',
     }),
   contact: () =>
     buildPageMetadata({
       title: `Contact | ${SITE_NAME}`,
-      description: `Call or WhatsApp ${SITE_NAME} to order wigs, book fixing or ask about custom units.`,
+      description: `Call or WhatsApp ${SITE_NAME} to order wigs, book a visit in Madina, or ask about bob, pixie and curly units.`,
       path: '/contact',
     }),
 };

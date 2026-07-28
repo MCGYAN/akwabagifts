@@ -1,6 +1,6 @@
 "use client";
 
-import { SITE_NAME, SITE_TAGLINE, LOGO_PATH, CONTACT_EMAIL, CONTACT_PHONE, BUSINESS_ADDRESS, BUSINESS_COUNTRY, SOCIAL_INSTAGRAM, SOCIAL_TIKTOK, CATALOG_PDF_PREFIX, OG_IMAGE_PATH, HERO_IMAGE_PATH, DEFAULT_PRODUCT_BRAND } from '@/lib/site-brand';
+import { SITE_NAME, CONTACT_EMAIL, CONTACT_PHONE, BUSINESS_ADDRESS, WHATSAPP_URL } from '@/lib/site-brand';
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -26,7 +26,7 @@ export default function FAQsPage() {
     {
       category: 'orders',
       question: 'Can I modify or cancel my order?',
-      answer: 'You can modify or cancel your order within 1 hour of placing it. Contact our customer service immediately via WhatsApp CONTACT_PHONE or Call CONTACT_PHONE or email CONTACT_EMAIL. Once an order is processed, modifications may not be possible.'
+      answer: `You can modify or cancel your order within 1 hour of placing it. Contact our customer service immediately via WhatsApp ${CONTACT_PHONE} or Call ${CONTACT_PHONE} or email ${CONTACT_EMAIL}. Once an order is processed, modifications may not be possible.`
     },
     {
       category: 'orders',
@@ -41,17 +41,17 @@ export default function FAQsPage() {
     {
       category: 'shipping',
       question: 'What are your delivery times?',
-      answer: 'Standard delivery takes 2-5 business days within Ghana. Express delivery (next-day) is available for Accra and Kumasi. Orders placed before 2pm are dispatched same day. Remote areas may take 5-7 business days.'
+      answer: 'Standard delivery takes 2-5 business days across Accra, Madina and Ghana. Express (next-day) may be available in Accra metro. Orders before 2pm dispatch same day; remote areas may take 5-7 business days.'
     },
     {
       category: 'shipping',
       question: 'How much does shipping cost?',
-      answer: `Standard shipping costs GHS 20. Express delivery costs GHS 40. Orders over GHS 300 qualify for FREE standard shipping. Store pickup is also available from ${BUSINESS_ADDRESS}.`
+      answer: `Standard shipping costs GHS 20. Express delivery costs GHS 40. Orders over GHS 300 qualify for FREE standard shipping. Store pickup is free from ${BUSINESS_ADDRESS}.`
     },
     {
       category: 'shipping',
       question: 'Do you ship outside Ghana?',
-      answer: `We currently serve customers within ${BUSINESS_COUNTRY} from ${BUSINESS_ADDRESS}. Sign up for our newsletter to be notified when we expand shipping coverage.`
+      answer: `We currently serve customers within Ghana from ${BUSINESS_ADDRESS}. Sign up for our newsletter to be notified when we expand shipping coverage.`
     },
     {
       category: 'shipping',
@@ -219,7 +219,7 @@ export default function FAQsPage() {
           </div>
           <h2 className="text-3xl font-bold text-white mb-4">Still Have Questions?</h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-            Our SITE_NAME team is ready to help with product and wholesale enquiries.
+            Our {SITE_NAME} team is ready to help with product and wholesale enquiries.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
@@ -230,7 +230,7 @@ export default function FAQsPage() {
               Contact Support
             </Link>
             <a
-              href="https://wa.me/233553347531"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-500 transition-colors whitespace-nowrap"

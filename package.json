@@ -1,16 +1,16 @@
 {
-  "name": "hair-reigns-gh",
+  "name": "derbys-hair-and-beauty",
   "version": "1.0.0",
-  "description": "Hair Reigns GH, premium wigs and hair services in Ghana",
-  "author": "Hair Reigns GH",
+  "description": "Derby's Hair & Beauty, ready-to-wear human hair wigs in Madina, Accra",
+  "author": "Derby's Hair & Beauty",
   "license": "MIT",
-  "homepage": "https://hairreignsgh.com",
+  "homepage": "https://derbyshairandbeauty.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git"
+    "url": "https://github.com/MCGYAN/Derby-s-Hair-Beauty.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/issues"
+    "url": "https://github.com/MCGYAN/Derby-s-Hair-Beauty/issues"
   },
   "keywords": ["ecommerce", "nextjs", "supabase", "storefront"],
   "private": true,

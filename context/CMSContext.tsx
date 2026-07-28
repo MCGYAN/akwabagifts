@@ -92,10 +92,10 @@ const defaultSettings: SiteSettings = {
     social_tiktok: SOCIAL_TIKTOK,
     social_snapchat: SOCIAL_SNAPCHAT,
     social_youtube: '',
-    primary_color: '#E3187D',
-    secondary_color: '#FF4DA6',
-    currency: 'USD',
-    currency_symbol: '$',
+    primary_color: '#4A183D',
+    secondary_color: '#D8B06A',
+    currency: 'GHS',
+    currency_symbol: 'GH₵',
 };
 
 const CMSContext = createContext<CMSContextType>({

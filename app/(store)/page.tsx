@@ -1,7 +1,7 @@
 'use client';
 
 import {
-  SITE_NAME,
+  SITE_LOCATION_TAGLINE,
   HERO_HEADLINE,
   HERO_SUBHEADLINE,
   HERO_SLIDES,
@@ -9,10 +9,10 @@ import {
   CUSTOMER_REVIEWS,
   ABOUT_HEADLINE,
   ABOUT_BODY,
+  WHATSAPP_URL,
 } from '@/lib/site-brand';
 import { MOCK_SHOP_CATEGORIES, MOCK_FEATURED_PRODUCTS } from '@/lib/mock-catalog';
 import Link from 'next/link';
-import HeroImageSlider from '@/components/HeroImageSlider';
 import MockCategoryCard from '@/components/MockCategoryCard';
 import MockProductCard from '@/components/MockProductCard';
 import AnimatedSection, { AnimatedGrid } from '@/components/AnimatedSection';
@@ -24,44 +24,57 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-brand-cream">
-      {/* SECTION 1 HERO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-brand-cream">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-cream via-brand-latte to-brand-champagne/40" />
-        <div className="absolute top-1/4 -left-20 w-72 h-72 rounded-full bg-brand-rose/8 blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 -right-16 w-96 h-96 rounded-full bg-brand-sage/25 blur-3xl animate-float animate-delay-300" />
-        <div className="absolute inset-0 flex items-center justify-center opacity-[0.04] pointer-events-none select-none">
-          <span className="font-serif text-[14vw] text-brand-rose/[0.06] whitespace-nowrap tracking-tight">REIGN</span>
-        </div>
+      {/* SECTION 1 HERO, full-bleed photo */}
+      <section className="relative min-h-[100svh] flex items-end overflow-hidden -mt-[calc(4.75rem+env(safe-area-inset-top,0px))] lg:-mt-[7.25rem] lg:items-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_SLIDES[0].src}
+          alt={HERO_SLIDES[0].alt}
+          className="absolute inset-0 h-full w-full object-cover object-[32%_18%] sm:object-[36%_center] lg:object-[38%_center]"
+          fetchPriority="high"
+        />
+        {/* Mild plum wash + mobile bottom fade for copy */}
+        <div
+          className="absolute inset-0 bg-[rgba(74,24,61,0.28)]"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[rgba(74,24,61,0.55)] via-[rgba(74,24,61,0.2)] to-transparent"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 lg:hidden bg-gradient-to-t from-[rgba(74,24,61,0.88)] via-[rgba(74,24,61,0.45)] to-[rgba(74,24,61,0.12)]"
+          aria-hidden
+        />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <AnimatedSection>
-              <p className="text-[10px] font-semibold tracking-[0.32em] uppercase text-brand-plum/45 mb-5 flex items-center gap-3">
-                <span className="h-px w-8 bg-brand-plum/25" />
-                {SITE_NAME}
-              </p>
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] text-brand-plum leading-[1.02] mb-6">
-                {HERO_HEADLINE}
-              </h1>
-              <p className="text-brand-plum/75 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light">
-                {HERO_SUBHEADLINE}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/shop" className="boutique-btn-primary">
-                  Shop wigs & hair
-                </Link>
-                <Link href="#shop-by-category" className="boutique-btn-secondary">
-                  Browse collections
-                </Link>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={150}>
-              <div className="relative md:p-4 md:glass-card md:rounded-[2rem] md:shadow-boutique-lg">
-                <HeroImageSlider slides={HERO_SLIDES} />
-              </div>
-            </AnimatedSection>
-          </div>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[calc(4.75rem+env(safe-area-inset-top,0px)+0.75rem)] pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] sm:pb-16 md:pb-24 lg:pt-[calc(7.25rem+3rem)] lg:pb-28">
+          <AnimatedSection className="max-w-xl text-left">
+            <p className="text-[10px] font-semibold tracking-[0.28em] sm:tracking-[0.32em] uppercase text-brand-gold mb-3 sm:mb-5">
+              {SITE_LOCATION_TAGLINE}
+            </p>
+            <h1 className="font-serif text-[2.15rem] leading-[1.08] sm:text-5xl md:text-6xl text-brand-cream mb-4 sm:mb-5">
+              {HERO_HEADLINE}
+            </h1>
+            <p className="text-brand-cream/90 text-[0.95rem] sm:text-base md:text-lg max-w-md mb-7 sm:mb-9 leading-relaxed font-light">
+              {HERO_SUBHEADLINE}
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <Link
+                href="/shop"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-3.5 min-h-[48px] bg-brand-gold text-brand-plum rounded-full font-semibold text-sm tracking-wide shadow-boutique transition-all duration-300 hover:bg-[#e0c07a] active:scale-[0.98]"
+              >
+                Shop wigs
+              </Link>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-3.5 min-h-[48px] border border-brand-cream/45 text-brand-cream rounded-full font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-brand-cream/10 active:scale-[0.98]"
+              >
+                Order on WhatsApp
+              </a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -101,14 +114,16 @@ export default function Home() {
       </section>
 
       {/* SECTION 3, SHOP BY CATEGORY */}
-      <section id="shop-by-category" className="py-16 md:py-24 bg-brand-cream scroll-mt-24">
+      <section id="shop-by-category" className="py-12 sm:py-16 md:py-24 bg-brand-cream scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-12 md:mb-16">
+          <AnimatedSection className="text-center mb-8 sm:mb-12 md:mb-16">
             <span className="boutique-section-eyebrow">Explore</span>
             <h2 className="boutique-section-title mb-3">Shop By Category</h2>
-            <p className="text-brand-plum/70">Wigs, closures, frontals and services, find your perfect crown.</p>
+            <p className="text-brand-plum/70 max-w-xl mx-auto text-sm sm:text-base px-1">
+              Choose the style that makes you exhale: bobs that frame, pixies that free, curls that soften every day.
+            </p>
           </AnimatedSection>
-          <AnimatedGrid className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+          <AnimatedGrid className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-6">
             {MOCK_SHOP_CATEGORIES.map((cat, i) => (
               <MockCategoryCard
                 key={cat.id}
@@ -123,14 +138,16 @@ export default function Home() {
       </section>
 
       {/* SECTION 4, FEATURED PRODUCTS */}
-      <section id="featured-products" className="py-16 md:py-24 bg-white/60 scroll-mt-24">
+      <section id="featured-products" className="py-12 sm:py-16 md:py-24 bg-white/60 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-12 md:mb-16">
-            <span className="boutique-section-eyebrow">Featured</span>
-            <h2 className="boutique-section-title mb-3">Featured Products</h2>
-            <p className="text-brand-plum/70">Handpicked wigs, units and services our customers love.</p>
+          <AnimatedSection className="text-center mb-8 sm:mb-12 md:mb-16">
+            <span className="boutique-section-eyebrow">Loved Right Now</span>
+            <h2 className="boutique-section-title mb-3">Looks That Feel Like Home</h2>
+            <p className="text-brand-plum/70 max-w-xl mx-auto text-sm sm:text-base">
+              Soft human hair our clients put on and suddenly stand a little taller.
+            </p>
           </AnimatedSection>
-          <AnimatedGrid className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
+          <AnimatedGrid className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6 md:gap-8">
             {MOCK_FEATURED_PRODUCTS.map((product) => (
               <MockProductCard
                 key={product.id}
@@ -146,25 +163,26 @@ export default function Home() {
           </AnimatedGrid>
           <div className="text-center mt-12">
             <Link href="/shop" className="boutique-btn-secondary">
-              View all wigs & hair
+              See every style
             </Link>
           </div>
         </div>
       </section>
 
       {/* SECTION 5, CUSTOMER REVIEWS */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 sm:py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-12 md:mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-brand-plum mb-3">
-              Queens Who Wear Their Crown
+          <AnimatedSection className="text-center mb-8 sm:mb-12 md:mb-16">
+            <span className="boutique-section-eyebrow">Real Women. Real Glow.</span>
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl text-brand-plum mb-3 leading-snug px-1">
+              They Put It On and Felt Like Themselves
             </h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {CUSTOMER_REVIEWS.map((review, i) => (
               <div
                 key={i}
-                className="glass-card rounded-2xl p-6 md:p-8 boutique-card-hover"
+                className="glass-card rounded-2xl p-5 sm:p-6 md:p-8 boutique-card-hover"
               >
                 <div className="flex gap-0.5 text-brand-plum/30 mb-4">
                   {[...Array(review.rating)].map((_, j) => (
@@ -179,11 +197,11 @@ export default function Home() {
       </section>
 
       {/* SECTION 6, ABOUT */}
-      <section className="py-16 md:py-24 bg-brand-latte/50">
+      <section className="py-12 sm:py-16 md:py-24 bg-brand-latte/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-brand-plum mb-6">{ABOUT_HEADLINE}</h2>
-            <p className="text-brand-plum/80 text-lg leading-relaxed">{ABOUT_BODY}</p>
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl text-brand-plum mb-4 sm:mb-6 leading-snug">{ABOUT_HEADLINE}</h2>
+            <p className="text-brand-plum/80 text-base sm:text-lg leading-relaxed">{ABOUT_BODY}</p>
             <Link
               href="/about"
               className="inline-flex items-center gap-2 mt-8 text-brand-plum font-semibold hover:text-brand-rose transition-colors"
@@ -195,9 +213,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 7, NEWSLETTER */}
-      <section className="py-16 md:py-20 bg-brand-cream">
+      <section className="py-12 sm:py-16 md:py-20 bg-brand-cream">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="glass-frosted rounded-3xl p-8 md:p-12">
+          <div className="glass-frosted rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12">
             <NewsletterSection />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { SITE_NAME, SITE_TAGLINE, LOGO_PATH, CONTACT_EMAIL, CONTACT_PHONE, BUSINESS_ADDRESS, SOCIAL_INSTAGRAM, SOCIAL_TIKTOK, CATALOG_PDF_PREFIX, OG_IMAGE_PATH, HERO_IMAGE_PATH, DEFAULT_PRODUCT_BRAND } from '@/lib/site-brand';
+import { SITE_NAME, CONTACT_EMAIL, CONTACT_PHONE, BUSINESS_ADDRESS, BUSINESS_COUNTRY, WHATSAPP_URL } from '@/lib/site-brand';
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -275,7 +275,7 @@ export default function TermsPage() {
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">11. Governing Law & Disputes</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              These terms are governed by the laws of Ghana. Any disputes arising from these terms or your use of the website shall be subject to the exclusive jurisdiction of the courts of Ghana.
+              These terms are governed by the laws of {BUSINESS_COUNTRY || 'YOUR_COUNTRY'}. Any disputes arising from these terms or your use of the website shall be subject to the exclusive jurisdiction of the courts of {BUSINESS_COUNTRY || 'YOUR_COUNTRY'}.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Before initiating any legal action, you agree to first contact us to seek resolution through informal negotiation.
@@ -301,7 +301,7 @@ export default function TermsPage() {
                   <i className="ri-mail-line text-blue-700 text-xl mt-1"></i>
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <a href="mailto:CONTACT_EMAIL" className="text-blue-700 hover:underline">CONTACT_EMAIL</a>
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-blue-700 hover:underline">{CONTACT_EMAIL}</a>
                   </div>
                 </div>
 
@@ -309,7 +309,7 @@ export default function TermsPage() {
                   <i className="ri-phone-line text-blue-700 text-xl mt-1"></i>
                   <div>
                     <p className="font-medium text-gray-900">Phone</p>
-                    <a href="tel:CONTACT_PHONE" className="text-blue-700 hover:underline">CONTACT_PHONE</a>, WhatsApp <a href="https://wa.me/233553347531" className="text-blue-700 hover:underline">CONTACT_PHONE</a>
+                    <a href={`tel:${CONTACT_PHONE}`} className="text-blue-700 hover:underline">{CONTACT_PHONE}</a>, WhatsApp <a href={WHATSAPP_URL} className="text-blue-700 hover:underline">{CONTACT_PHONE}</a>
                   </div>
                 </div>
 

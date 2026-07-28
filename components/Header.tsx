@@ -88,7 +88,7 @@ export default function Header() {
   };
 
   const iconBtn =
-    'h-10 w-10 rounded-full flex items-center justify-center text-brand-plum transition-all duration-300 max-lg:bg-white/70 max-lg:border max-lg:border-brand-rose/15 lg:glass-pill lg:border-white/40 hover:text-brand-rose';
+    'h-10 w-10 rounded-full flex items-center justify-center text-brand-plum transition-all duration-300 max-lg:bg-white/80 max-lg:border max-lg:border-brand-plum/10 lg:glass-pill lg:border-white/40 hover:text-brand-plum active:scale-95';
 
   const headerContent = (
     <>
@@ -101,12 +101,12 @@ export default function Header() {
         <nav aria-label="Main navigation" className="relative">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
             {/* Mobile: logo left | search + cart right */}
-            <div className="lg:hidden flex items-center justify-between h-[4.5rem] gap-3">
-              <Link href="/" className="flex shrink-0 select-none" aria-label="Go to homepage">
+            <div className="lg:hidden flex items-center justify-between h-[4.75rem] gap-2">
+              <Link href="/" className="flex shrink-0 select-none min-w-0" aria-label="Go to homepage">
                 <img
                   src={HEADER_LOGO_PATH}
                   alt={siteName}
-                  className="h-16 w-auto max-w-[min(62vw,260px)] object-contain object-left"
+                  className="h-[3.85rem] w-auto max-w-[min(58vw,220px)] object-contain object-left"
                 />
               </Link>
               <div className="flex items-center justify-end gap-1 shrink-0">
@@ -117,7 +117,7 @@ export default function Header() {
                   <button className={iconBtn} onClick={() => setIsCartOpen(!isCartOpen)} aria-label="Cart">
                     <i className="ri-shopping-bag-3-line text-xl" />
                     {cartCount > 0 && (
-                      <span className="absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-brand-rose text-[10px] font-bold text-white">
+                      <span className="absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-brand-plum text-[10px] font-bold text-brand-cream">
                         {cartCount}
                       </span>
                     )}
@@ -129,8 +129,8 @@ export default function Header() {
 
             {/* Desktop */}
             <div
-              className={`hidden lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-4 lg:transition-all lg:duration-500 ${
-                scrolled ? 'lg:h-[4.75rem]' : 'lg:h-24'
+              className={`hidden lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-6 lg:transition-all lg:duration-500 ${
+                scrolled ? 'lg:h-[5.5rem]' : 'lg:h-[7.25rem]'
               }`}
             >
               <div className="flex items-center gap-3">
@@ -138,8 +138,10 @@ export default function Header() {
                   <img
                     src={HEADER_LOGO_PATH}
                     alt={siteName}
-                    className={`w-auto object-contain transition-all duration-500 ${
-                      scrolled ? 'h-14 sm:h-16' : 'h-16 sm:h-[4.5rem] max-w-[300px]'
+                    className={`w-auto object-contain object-left transition-all duration-500 ${
+                      scrolled
+                        ? 'h-[4.5rem] max-w-[280px]'
+                        : 'h-[6.25rem] max-w-[360px]'
                     }`}
                   />
                 </Link>

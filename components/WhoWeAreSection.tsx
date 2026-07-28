@@ -1,6 +1,6 @@
 'use client';
 
-import { SITE_NAME, SITE_TAGLINE, LOGO_PATH, CONTACT_EMAIL, CONTACT_PHONE, BUSINESS_ADDRESS, SOCIAL_INSTAGRAM, SOCIAL_TIKTOK, CATALOG_PDF_PREFIX, OG_IMAGE_PATH, HERO_IMAGE_PATH, DEFAULT_PRODUCT_BRAND } from '@/lib/site-brand';
+import { SITE_NAME, LOGO_PATH, BUSINESS_ADDRESS } from '@/lib/site-brand';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedSection from './AnimatedSection';
@@ -18,10 +18,10 @@ export default function WhoWeAreSection() {
             </h2>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                <strong>{SITE_NAME}</strong> is your store. Update this copy in <code>components/WhoWeAreSection.tsx</code>. Based in {BUSINESS_ADDRESS}.
+                <strong>{SITE_NAME}</strong> is Madina&apos;s neighbourhood home for ready-to-wear human hair, bob units, pixie cuts and curly wigs that help you feel like yourself, only elevated. Based near Ritz Hotel at {BUSINESS_ADDRESS}.
               </p>
               <p>
-                We focus on quality and value. Whether you're stocking up for your business or shopping for yourself, we handpick products that deliver genuine quality and great prices.
+                We believe beauty should feel effortless. Soft glam you can wear today, confidence that walks out with you, and hair that turns heads gently, because when your hair feels like you, everything else falls into place.
               </p>
               <div className="pt-4">
                 <Link 
@@ -56,8 +56,8 @@ export default function WhoWeAreSection() {
                   <i className="ri-medal-line text-xl"></i>
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900">Premium Quality</p>
-                  <p className="text-sm text-gray-500">Authentic Fragrances</p>
+                  <p className="font-bold text-gray-900">Soft Confidence</p>
+                  <p className="text-sm text-gray-500">Hair That Feels Like You</p>
                 </div>
               </div>
             </div>

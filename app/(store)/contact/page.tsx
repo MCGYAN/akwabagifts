@@ -103,8 +103,8 @@ export default function ContactPage() {
   const contactAddress = getSetting('contact_address') || BUSINESS_ADDRESS;
 
   const heroTitle = pageContent?.title || `Contact ${SITE_NAME}`;
-  const heroSubtitle = pageContent?.subtitle || 'Order wigs, book fixing or ask about custom units, we reply fast on WhatsApp.';
-  const heroContent = pageContent?.content || 'Call, WhatsApp or send a message. We are here to help you find your perfect crown.';
+  const heroSubtitle = pageContent?.subtitle || 'Order a ready-to-wear wig, visit us in Madina near Ritz Hotel, or WhatsApp, we reply fast.';
+  const heroContent = pageContent?.content || 'Call, WhatsApp or walk in. We help you find the bob, pixie or curl that feels like you.';
 
   const waLink = WHATSAPP_URL;
   const telLink = `tel:${CONTACT_PHONE}`;
@@ -136,26 +136,26 @@ export default function ContactPage() {
       title: 'Visit Us',
       value: contactAddress,
       link: 'https://maps.google.com',
-      description: 'Ghana, nationwide delivery'
+      description: 'Madina, near Ritz Hotel, pickup & delivery'
     }
   ];
 
   const faqs = [
     {
       question: 'How do I place an order?',
-      answer: `Call ${CONTACT_PHONE_DISPLAY}, WhatsApp us, or add items to your cart and checkout. For custom wigs and services, message us first so we can confirm details.`,
+      answer: `Call ${CONTACT_PHONE_DISPLAY}, WhatsApp us, checkout online, or walk in near Ritz Hotel in Madina. We will help you pick the right ready-to-wear style.`,
     },
     {
-      question: 'What are your delivery times?',
-      answer: 'Standard delivery takes 2-5 business days across Ghana. Every wig is packed with care so your unit arrives in perfect condition.',
+      question: 'Do you deliver in Accra and Madina?',
+      answer: 'Yes, we deliver across Accra and Madina, with standard delivery in 2 to 5 business days. Express options may be available depending on your area.',
     },
     {
-      question: 'Do you offer wig fixing and revamps?',
-      answer: 'Yes, we offer professional wig fixing, machine wig-making and revamp services. Book via WhatsApp to confirm availability and pricing.',
+      question: 'What styles do you sell?',
+      answer: 'Ready-to-wear human hair wigs including bob units, pixie cuts and curly styles, soft glam you can wear the same day.',
     },
     {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept Mobile Money, bank transfer and card payments online. For custom orders, we may request a deposit, details shared on WhatsApp.',
+      question: 'Can I pick up my order?',
+      answer: `Yes. Collect from ${BUSINESS_ADDRESS}. Same-day pickup is often available when you order early, WhatsApp us to confirm.`,
     },
   ];
 
@@ -164,7 +164,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get In Touch"
         title={`Contact ${SITE_NAME}`}
-        subtitle="Order wigs, book fixing or ask about custom units, we reply fast on WhatsApp."
+        subtitle="Order a ready-to-wear wig, visit us in Madina near Ritz Hotel, or WhatsApp, we reply fast."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -304,7 +304,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Quick Answers</h2>
             <p className="text-gray-600 mb-8">
-              Quick answers for orders, delivery, wholesale, and payments
+              Ordering, Accra & Madina delivery, styles, and pickup near Ritz
             </p>
 
             <div className="space-y-4 mb-12">
@@ -347,7 +347,7 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Visit Our Store</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Prefer to shop in person? Visit {SITE_NAME} at {BUSINESS_ADDRESS}.
+              Prefer to try styles in person? Visit {SITE_NAME} in Madina, near Ritz Hotel, walk in, walk out radiant.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-gray-600">
               <div className="flex items-center gap-2">

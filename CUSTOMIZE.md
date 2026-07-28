@@ -4,7 +4,8 @@ Complete these steps to make this project fully yours.
 
 ## Identity
 
-- [ ] Edit `lib/site-brand.ts` — replace all `YOUR_*` placeholders
+- [ ] Edit `lib/site-brand.ts` — replace all `YOUR_*` placeholders (name, copy, contact, socials, benefits, reviews, about)
+- [ ] Update `BRAND_COLORS` in `lib/site-brand.ts`, then mirror in `app/globals.css` and `tailwind.config.js`
 - [ ] Replace `yourdomain.com` in `.env.local` and deployment env
 - [ ] Update `package.json` name, author, homepage, repository URL
 
