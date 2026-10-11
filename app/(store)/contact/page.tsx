@@ -7,6 +7,8 @@ import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_SECONDARY_DISPLAY,
   BUSINESS_ADDRESS,
+  BUSINESS_CITY,
+  BUSINESS_COUNTRY,
   WHATSAPP_URL,
 } from '@/lib/site-brand';
 import { useState, useEffect } from 'react';
@@ -103,8 +105,8 @@ export default function ContactPage() {
   const contactAddress = getSetting('contact_address') || BUSINESS_ADDRESS;
 
   const heroTitle = pageContent?.title || `Contact ${SITE_NAME}`;
-  const heroSubtitle = pageContent?.subtitle || 'Order a ready-to-wear wig, visit us in Madina near Ritz Hotel, or WhatsApp, we reply fast.';
-  const heroContent = pageContent?.content || 'Call, WhatsApp or walk in. We help you find the bob, pixie or curl that feels like you.';
+  const heroSubtitle = pageContent?.subtitle || 'Akwaaba! Order online, visit our shop, or message us on WhatsApp, we reply fast.';
+  const heroContent = pageContent?.content || 'Call, WhatsApp or walk in. We will help you find the perfect gift for any occasion.';
 
   const waLink = WHATSAPP_URL;
   const telLink = `tel:${CONTACT_PHONE}`;
@@ -115,7 +117,7 @@ export default function ContactPage() {
       title: 'Call Us',
       value: contactPhone,
       link: telLink,
-      description: `Also: ${CONTACT_PHONE_SECONDARY_DISPLAY}`,
+      description: CONTACT_PHONE_SECONDARY_DISPLAY ? `Also: ${CONTACT_PHONE_SECONDARY_DISPLAY}` : 'Mon to Sat, during business hours',
     },
     {
       icon: 'ri-mail-line',
@@ -136,22 +138,22 @@ export default function ContactPage() {
       title: 'Visit Us',
       value: contactAddress,
       link: 'https://maps.google.com',
-      description: 'Madina, near Ritz Hotel, pickup & delivery'
+      description: 'Pickup & delivery available'
     }
   ];
 
   const faqs = [
     {
       question: 'How do I place an order?',
-      answer: `Call ${CONTACT_PHONE_DISPLAY}, WhatsApp us, checkout online, or walk in near Ritz Hotel in Madina. We will help you pick the right ready-to-wear style.`,
+      answer: `Call ${CONTACT_PHONE_DISPLAY}, WhatsApp us, checkout online, or visit us at ${BUSINESS_ADDRESS}. We will help you pick the perfect gift.`,
     },
     {
-      question: 'Do you deliver in Accra and Madina?',
-      answer: 'Yes, we deliver across Accra and Madina, with standard delivery in 2 to 5 business days. Express options may be available depending on your area.',
+      question: `Do you deliver outside ${BUSINESS_CITY}?`,
+      answer: `Yes, we deliver across ${BUSINESS_COUNTRY}, with standard delivery in 2 to 5 business days. Express options may be available depending on your area.`,
     },
     {
-      question: 'What styles do you sell?',
-      answer: 'Ready-to-wear human hair wigs including bob units, pixie cuts and curly styles, soft glam you can wear the same day.',
+      question: 'Do you ship gifts abroad?',
+      answer: 'Yes. Message us on WhatsApp with the destination and we will quote international delivery so you can send a little piece of Ghana to loved ones overseas.',
     },
     {
       question: 'Can I pick up my order?',
@@ -164,7 +166,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get In Touch"
         title={`Contact ${SITE_NAME}`}
-        subtitle="Order a ready-to-wear wig, visit us in Madina near Ritz Hotel, or WhatsApp, we reply fast."
+        subtitle="Akwaaba! Order online, visit our shop, or message us on WhatsApp, we reply fast."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -304,7 +306,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Quick Answers</h2>
             <p className="text-gray-600 mb-8">
-              Ordering, Accra & Madina delivery, styles, and pickup near Ritz
+              Ordering, delivery, products and pickup
             </p>
 
             <div className="space-y-4 mb-12">
@@ -347,7 +349,7 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Visit Our Store</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Prefer to try styles in person? Visit {SITE_NAME} in Madina, near Ritz Hotel, walk in, walk out radiant.
+              Prefer to shop in person? Visit {SITE_NAME} at {BUSINESS_ADDRESS}.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-gray-600">
               <div className="flex items-center gap-2">

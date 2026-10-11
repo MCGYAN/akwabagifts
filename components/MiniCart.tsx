@@ -58,7 +58,7 @@ export default function MiniCart({ isOpen, onClose }: MiniCartProps) {
             </div>
             <h3 className="font-serif text-xl text-brand-plum mb-2">Your bag is empty</h3>
             <p className="text-sm text-brand-plum/60 mb-8 max-w-xs">
-              Explore the collection and find something that makes you feel confident.
+              Explore our handmade collection and find a little piece of Ghana to love or to give.
             </p>
             <Link href="/shop" onClick={onClose} className="boutique-btn-primary">
               Browse the shop

@@ -2,6 +2,7 @@ import {
   SITE_NAME,
   SITE_DESCRIPTION,
   LOGO_PATH,
+  SITE_URL,
   OG_IMAGE_PATH,
   BUSINESS_CITY,
   BUSINESS_COUNTRY,
@@ -39,7 +40,7 @@ export function generateMetadata({
   noindex = false,
   canonicalPath = '',
 }: SEOProps): Metadata {
-  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://yourdomain.com';
+  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || SITE_URL;
   const defaultOgImage = `${siteUrl}${OG_IMAGE_PATH}`;
   const resolvedOgImage = ogImage || defaultOgImage;
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
@@ -95,7 +96,7 @@ export function generateMetadata({
 }
 
 export function generateOrganizationJsonLd() {
-  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://yourdomain.com';
+  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || SITE_URL;
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -108,7 +109,7 @@ export function generateOrganizationJsonLd() {
 }
 
 export function generateLocalBusinessJsonLd() {
-  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://yourdomain.com';
+  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || SITE_URL;
   return {
     '@context': 'https://schema.org',
     '@type': 'Store',

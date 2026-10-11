@@ -1,16 +1,16 @@
 {
-  "name": "derbys-hair-and-beauty",
+  "name": "akwaaba-gifts",
   "version": "1.0.0",
-  "description": "Derby's Hair & Beauty, ready-to-wear human hair wigs in Madina, Accra",
-  "author": "Derby's Hair & Beauty",
+  "description": "Akwaaba Gifts, handmade Ghanaian gifts, crafts and souvenirs. A Little Piece of Ghana.",
+  "author": "Akwaaba Gifts",
   "license": "MIT",
-  "homepage": "https://derbyshairandbeauty.com",
+  "homepage": "https://akwaabagifts.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MCGYAN/Derby-s-Hair-Beauty.git"
+    "url": "https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git"
   },
   "bugs": {
-    "url": "https://github.com/MCGYAN/Derby-s-Hair-Beauty/issues"
+    "url": "https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/issues"
   },
   "keywords": ["ecommerce", "nextjs", "supabase", "storefront"],
   "private": true,

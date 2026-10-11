@@ -9,7 +9,10 @@ import {
   BUSINESS_COUNTRY,
   SOCIAL_INSTAGRAM,
   SOCIAL_FACEBOOK,
+  SITE_URL,
+  OG_IMAGE_PATH,
 } from '@/lib/site-brand';
+import { SEO_KEYWORDS } from '@/lib/seo';
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { CartProvider } from "@/context/CartContext";
@@ -20,10 +23,10 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#4A183D',
+  themeColor: '#174D3C',
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://derbyshairandbeauty.com';
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || SITE_URL;
 
 // Favicon & OG assets from public
 export const metadata: Metadata = {
@@ -33,14 +36,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  keywords: [
-    SITE_NAME,
-    'human hair wigs Madina',
-    'bob units Accra',
-    'pixie cut wig',
-    'curly wigs Ghana',
-    BUSINESS_CITY,
-  ].filter(Boolean),
+  keywords: SEO_KEYWORDS,
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
@@ -84,7 +80,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: '/opengraph-image',
+        url: OG_IMAGE_PATH,
         width: 1200,
         height: 630,
         alt: SITE_NAME,
@@ -96,7 +92,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
-    images: ["/opengraph-image"],
+    images: [OG_IMAGE_PATH],
   },
   alternates: {
     canonical: siteUrl,
@@ -118,12 +114,12 @@ export default function RootLayout({
     <html lang="en-GH">
       <head>
         {/* PWA Meta Tags */}
-        <meta name="theme-color" content="#4A183D" />
+        <meta name="theme-color" content="#174D3C" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content={SITE_NAME} />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#4A183D" />
+        <meta name="msapplication-TileColor" content="#174D3C" />
         <meta name="msapplication-tap-highlight" content="no" />
 
         {/* FAVICON, add /public/favicon.ico and /public/apple-touch-icon.png */}
@@ -134,12 +130,12 @@ export default function RootLayout({
         <meta name="robots" content="index,follow" />
         <meta property="og:title" content={`${SITE_NAME} | ${SITE_TAGLINE}`} />
         <meta property="og:description" content={SITE_DESCRIPTION} />
-        <meta property="og:image" content={`${siteUrl}/opengraph-image`} />
+        <meta property="og:image" content={`${siteUrl}${OG_IMAGE_PATH}`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={SITE_NAME} />
         <meta name="twitter:description" content={SITE_DESCRIPTION} />
-        <meta name="twitter:image" content={`${siteUrl}/opengraph-image`} />
+        <meta name="twitter:image" content={`${siteUrl}${OG_IMAGE_PATH}`} />
         <link
           href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
           rel="stylesheet"
@@ -147,7 +143,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* eslint-disable-next-line @next/next/no-page-custom-font -- App Router: fonts loaded in root layout apply to all pages */}
-        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Pacifico&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
         {/* Structured Data - Organization + LocalBusiness */}
         <script

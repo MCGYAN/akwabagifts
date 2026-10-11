@@ -1,16 +1,34 @@
 # Asset Replacement Guide
 
-Original project images have been removed. Add your own files below.
+All brand images in `/public` are neutral placeholders. Replace them with your own.
+
+## Generated from one source
+
+Put your logo on a **black background** at `/public/logo-source.png` (square, ~1000×1000px, emblem in the top ~60%, wordmark below), then run:
+
+```bash
+node scripts/process-brand-assets.mjs
+```
+
+This regenerates:
 
 | File | Size | Purpose |
 |------|------|---------|
-| `/public/favicon.ico` | 32×32px | Browser tab icon |
+| `/public/logo.png`, `/public/logo-header.png` | Source size | Main / header logo (transparent) |
+| `/public/logo-footer.png` | Source size | Footer logo (dark wordmark recoloured gold) |
+| `/public/logo-mark.png` | Emblem only | Circular mark |
+| `/public/favicon.ico`, `/public/favicon.png` | 32×32px | Browser tab icon |
 | `/public/apple-touch-icon.png` | 180×180px | iOS home screen |
-| `/public/icon-192.png` | 192×192px | Android PWA |
-| `/public/icon-512.png` | 512×512px | PWA splash |
-| `/public/logo.svg` | Vector | Main logo (placeholder included) |
+| `/public/icon-192.png`, `/public/icon-512.png` | 192 / 512px | Android PWA |
 | `/public/og-image.png` | 1200×630px | Social share preview |
-| `/public/hero.jpg` | 1920×1080px | Homepage hero (optional) |
+
+Also copy `/public/favicon.ico` to `/app/favicon.ico`.
+
+## Replace manually
+
+| File | Size | Purpose |
+|------|------|---------|
+| `/public/hero.jpg` | 1920×1080px | Homepage hero |
 
 ## Tools
 

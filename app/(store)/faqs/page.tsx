@@ -30,6 +30,16 @@ export default function FAQsPage() {
     },
     {
       category: 'orders',
+      question: 'Do you offer gift wrapping and gift notes?',
+      answer: 'Yes! Every order can be gift-wrapped, and we include a card about the maker and meaning of each piece. Add your personal message at checkout or send it to us on WhatsApp.'
+    },
+    {
+      category: 'orders',
+      question: 'Do you take corporate and bulk orders?',
+      answer: 'Absolutely. We create corporate hampers and bulk gifts for clients, staff and events, with custom cards. WhatsApp us with your quantity and budget for a quote.'
+    },
+    {
+      category: 'orders',
       question: 'How do I track my order?',
       answer: 'After your order ships, you\'ll receive a tracking number via email and SMS. Visit our Order Tracking page and enter your order number and email address to see real-time updates on your delivery status.'
     },
@@ -41,7 +51,7 @@ export default function FAQsPage() {
     {
       category: 'shipping',
       question: 'What are your delivery times?',
-      answer: 'Standard delivery takes 2-5 business days across Accra, Madina and Ghana. Express (next-day) may be available in Accra metro. Orders before 2pm dispatch same day; remote areas may take 5-7 business days.'
+      answer: 'Standard delivery takes 2-5 business days nationwide. Express (next-day) may be available in Accra. Orders before 2pm dispatch same day; remote areas may take 5-7 business days.'
     },
     {
       category: 'shipping',
@@ -51,7 +61,7 @@ export default function FAQsPage() {
     {
       category: 'shipping',
       question: 'Do you ship outside Ghana?',
-      answer: `We currently serve customers within Ghana from ${BUSINESS_ADDRESS}. Sign up for our newsletter to be notified when we expand shipping coverage.`
+      answer: `Yes. We ship from ${BUSINESS_ADDRESS} to loved ones abroad. Message us on WhatsApp with the destination and we will quote international delivery.`
     },
     {
       category: 'shipping',

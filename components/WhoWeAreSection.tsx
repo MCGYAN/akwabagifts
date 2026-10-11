@@ -1,6 +1,6 @@
 'use client';
 
-import { SITE_NAME, LOGO_PATH, BUSINESS_ADDRESS } from '@/lib/site-brand';
+import { SITE_NAME, SITE_SHORT_NAME, SITE_TAGLINE, LOGO_PATH, BUSINESS_ADDRESS } from '@/lib/site-brand';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedSection from './AnimatedSection';
@@ -18,10 +18,10 @@ export default function WhoWeAreSection() {
             </h2>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                <strong>{SITE_NAME}</strong> is Madina&apos;s neighbourhood home for ready-to-wear human hair, bob units, pixie cuts and curly wigs that help you feel like yourself, only elevated. Based near Ritz Hotel at {BUSINESS_ADDRESS}.
+                <strong>{SITE_NAME}</strong> celebrates Ghanaian creativity, culture and craftsmanship. We bring together handmade gifts, crafts, jewelry, home décor and souvenirs from talented local makers.
               </p>
               <p>
-                We believe beauty should feel effortless. Soft glam you can wear today, confidence that walks out with you, and hair that turns heads gently, because when your hair feels like you, everything else falls into place.
+                Every piece has a story: the weaver in Bolgatanga, the bead maker in Krobo, the carver in Ahwiaa. When you give an Akwaaba gift, you share that story, and a little piece of Ghana.
               </p>
               <div className="pt-4">
                 <Link 
@@ -37,16 +37,16 @@ export default function WhoWeAreSection() {
 
           {/* Image Content */}
           <AnimatedSection className="order-1 lg:order-2 relative" delay={200}>
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative group">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative group bg-brand-cream">
               <Image
                 src={LOGO_PATH}
                 alt={SITE_NAME}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-contain p-8 sm:p-12 transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Decorative Overlay */}
-              <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-300"></div>
+              
             </div>
             
             {/* Floating Element */}
@@ -56,8 +56,8 @@ export default function WhoWeAreSection() {
                   <i className="ri-medal-line text-xl"></i>
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900">Soft Confidence</p>
-                  <p className="text-sm text-gray-500">Hair That Feels Like You</p>
+                  <p className="font-bold text-gray-900">{SITE_SHORT_NAME}</p>
+                  <p className="text-sm text-gray-500">{SITE_TAGLINE}</p>
                 </div>
               </div>
             </div>

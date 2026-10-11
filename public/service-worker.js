@@ -1,5 +1,5 @@
 // Service Worker — update CACHE_VERSION when deploying
-const CACHE_VERSION = 'app-v1-derbys';
+const CACHE_VERSION = 'app-v1';
 const LOGO_PATH = '/logo-header.png?v=5';
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;

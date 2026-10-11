@@ -2,23 +2,26 @@ import {
   SITE_NAME,
   SITE_DESCRIPTION,
   SITE_TAGLINE,
+  SITE_URL,
   BUSINESS_CITY,
   BUSINESS_COUNTRY,
   OG_IMAGE_PATH,
 } from '@/lib/site-brand';
 import type { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://derbyshairandbeauty.com';
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || SITE_URL;
 
 export const SEO_KEYWORDS = [
-  'human hair wigs Madina',
-  'bob units Accra',
-  'pixie cut wig Ghana',
-  'curly wigs Accra',
-  'ready to wear wigs Ghana',
-  "Derby's Hair and Beauty",
-  'wigs near Ritz Hotel Madina',
-  'WhatsApp wig order Accra',
+  SITE_NAME,
+  `shop online ${BUSINESS_CITY}`,
+  `online store ${BUSINESS_COUNTRY}`,
+  'handmade Ghanaian gifts',
+  'Ghana souvenirs',
+  'kente gifts',
+  'Bolga baskets',
+  'Krobo beads jewelry',
+  'corporate gifts Ghana',
+  'gift shop Accra',
   BUSINESS_CITY,
   BUSINESS_COUNTRY,
 ].filter(Boolean);
@@ -67,32 +70,32 @@ export function buildPageMetadata({
 export const pageSeoTemplates = {
   home: () =>
     buildPageMetadata({
-      title: `${SITE_NAME} | Ready-to-Wear Human Hair Wigs in Madina`,
+      title: `${SITE_NAME} | ${SITE_TAGLINE}`,
       description: SITE_DESCRIPTION,
       path: '/',
     }),
   shop: () =>
     buildPageMetadata({
-      title: `Shop Wigs & Units | ${SITE_NAME}`,
-      description: `Browse bob units, pixie cuts, curly wigs and ready-to-wear human hair at ${SITE_NAME}. Order via WhatsApp.`,
+      title: `Shop | ${SITE_NAME}`,
+      description: `Browse the full collection at ${SITE_NAME}. Order online or via WhatsApp.`,
       path: '/shop',
     }),
   categories: () =>
     buildPageMetadata({
       title: `Categories | ${SITE_NAME}`,
-      description: `Shop bob units, pixies, curly styles and ready-to-wear wigs at ${SITE_NAME}.`,
+      description: `Shop by category at ${SITE_NAME}.`,
       path: '/categories',
     }),
   about: () =>
     buildPageMetadata({
       title: `About | ${SITE_NAME}`,
-      description: `Meet ${SITE_NAME} in Madina near Ritz Hotel, ready-to-wear human hair that helps you feel confident every day. ${SITE_TAGLINE}`,
+      description: `Meet ${SITE_NAME} in ${BUSINESS_CITY}. ${SITE_TAGLINE}`,
       path: '/about',
     }),
   contact: () =>
     buildPageMetadata({
       title: `Contact | ${SITE_NAME}`,
-      description: `Call or WhatsApp ${SITE_NAME} to order wigs, book a visit in Madina, or ask about bob, pixie and curly units.`,
+      description: `Call, WhatsApp or email ${SITE_NAME} to place an order or ask a question.`,
       path: '/contact',
     }),
 };

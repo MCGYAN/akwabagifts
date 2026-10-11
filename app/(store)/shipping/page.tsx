@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BUSINESS_ADDRESS } from '@/lib/site-brand';
+import { BUSINESS_ADDRESS, BUSINESS_CITY, BUSINESS_COUNTRY } from '@/lib/site-brand';
 
 export default function ShippingPage() {
   const deliveryOptions = [
@@ -7,14 +7,14 @@ export default function ShippingPage() {
       type: 'Standard Delivery',
       time: '2-5 Business Days',
       cost: 'GHS 20',
-      description: 'Ideal for Accra and Madina orders when you are not in a rush',
+      description: `Ideal for ${BUSINESS_CITY} orders when you are not in a rush`,
       icon: 'ri-truck-line'
     },
     {
       type: 'Express Delivery',
       time: 'Next Day',
       cost: 'GHS 40',
-      description: 'Available for Accra metro and select Greater Accra areas on orders before 2pm',
+      description: `Available in ${BUSINESS_CITY} and nearby areas on orders before 2pm`,
       icon: 'ri-rocket-line'
     },
     {
@@ -28,26 +28,26 @@ export default function ShippingPage() {
 
   const zones = [
     {
-      zone: 'Zone 1: Accra Metro',
-      areas: 'Madina, East Legon, Airport, Osu, Cantonments, Accra Central and nearby metro areas',
+      zone: `Zone 1: ${BUSINESS_CITY}`,
+      areas: 'Osu, East Legon, Airport, Cantonments, Labone, Accra Central and nearby areas',
       standard: '1-2 days',
       express: 'Next day'
     },
     {
       zone: 'Zone 2: Greater Accra',
-      areas: 'Tema, Spintex, Kasoa, Dodowa, Adenta, and wider Greater Accra',
+      areas: 'Tema, Spintex, Adenta, Madina, Kasoa and wider Greater Accra',
       standard: '2-3 days',
       express: 'Next day'
     },
     {
       zone: 'Zone 3: Major Cities',
-      areas: 'Kumasi, Cape Coast, Takoradi, Tamale and other major Ghanaian cities',
+      areas: 'Kumasi, Cape Coast, Takoradi, Tamale and other major cities',
       standard: '3-4 days',
       express: '1-2 days'
     },
     {
       zone: 'Zone 4: Other Areas',
-      areas: 'All other locations within Ghana',
+      areas: `All other locations within ${BUSINESS_COUNTRY}`,
       standard: '4-5 days',
       express: 'Not available'
     }
@@ -60,7 +60,7 @@ export default function ShippingPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">Shipping & Delivery</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Fast, reliable delivery across Accra, Madina and Ghana. Free standard shipping on orders over GHS 300.
+              Fast, reliable delivery across {BUSINESS_COUNTRY}. Free standard shipping on orders over GHS 300.
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function ShippingPage() {
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-3">Free Standard Shipping</h3>
           <p className="text-lg text-gray-600">
-            Spend GHS 300 or more and get <span className="font-bold text-blue-700">FREE standard delivery</span> anywhere in Ghana
+            Spend GHS 300 or more and get <span className="font-bold text-blue-700">FREE standard delivery</span> anywhere in {BUSINESS_COUNTRY}
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export default function ShippingPage() {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Order Processing</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Orders placed before 2pm are processed same day. We carefully pack your wig and prepare it for dispatch or Madina pickup.
+                    Orders placed before 2pm are processed same day. We carefully gift-wrap your order and prepare it for dispatch or store pickup.
                   </p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default function ShippingPage() {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Delivery</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Our delivery partner will contact you before arrival. Sign for your package and step into your new look!
+                    Our delivery partner will contact you before arrival. Sign for your package and enjoy your little piece of Ghana!
                   </p>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export default function ShippingPage() {
                   Failed Deliveries
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-sm">
-                  If you&apos;re unavailable, we&apos;ll attempt delivery twice. After that, the package is held at a collection point for 5 days, or you can arrange Madina pickup.
+                  If you&apos;re unavailable, we&apos;ll attempt delivery twice. After that, the package is held at a collection point for 5 days, or you can arrange store pickup.
                 </p>
               </div>
 
@@ -277,7 +277,7 @@ export default function ShippingPage() {
         <div className="bg-gradient-to-br from-blue-700 to-blue-900 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Need Help with Your Delivery?</h2>
           <p className="text-blue-100 mb-6 leading-relaxed">
-            Questions about Accra or Madina delivery, pickup near Ritz, or tracking? Our team is here to help.
+            Questions about delivery, pickup, or tracking? Our team is here to help.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link

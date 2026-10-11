@@ -1,10 +1,10 @@
-import { SITE_NAME } from '@/lib/site-brand';
+import { SITE_NAME, SITE_URL, OG_IMAGE_PATH } from '@/lib/site-brand';
 import type { Metadata } from 'next';
 import { createClient } from '@supabase/supabase-js';
 import { getMockProductBySlug } from '@/lib/mock-catalog';
 import ProductDetailClient from './ProductDetailClient';
 
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://example.com';
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || SITE_URL;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     const title = `${product.name} | ${SITE_NAME}`;
     const description = (product.description || `Shop ${product.name} at ${SITE_NAME}.`).slice(0, 155);
-    const image = product.product_images?.[0]?.url || `${siteUrl}/opengraph-image`;
+    const image = product.product_images?.[0]?.url || `${siteUrl}${OG_IMAGE_PATH}`;
 
     return {
       title,

@@ -6,11 +6,11 @@ const resend = new Resend(process.env.RESEND_API_KEY || 'missing_api_key');
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'support@example.com';
 const EMAIL_FROM = process.env.EMAIL_FROM || 'Storefront <support@example.com>';
 const BRAND = {
-    name: process.env.NEXT_PUBLIC_SITE_NAME || 'YOUR_APP_TITLE',
-    color: '#2563eb',
-    colorLight: '#eff6ff',
-    colorDark: '#1e3a5f',
-    url: (process.env.NEXT_PUBLIC_APP_URL || 'https://yourdomain.com').replace(/\/+$/, ''),
+    name: process.env.NEXT_PUBLIC_SITE_NAME || 'Akwaaba Gifts',
+    color: '#174D3C',
+    colorLight: '#FFF8ED',
+    colorDark: '#0F3328',
+    url: (process.env.NEXT_PUBLIC_APP_URL || 'https://akwaabagifts.com').replace(/\/+$/, ''),
     phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || 'YOUR_PHONE_NUMBER',
 };
 
@@ -30,7 +30,7 @@ ${preheader ? `<span style="display:none;max-height:0;overflow:hidden;">${prehea
 <!-- Header -->
 <tr><td style="background:linear-gradient(135deg,${BRAND.color},${BRAND.colorDark});padding:32px 40px;text-align:center;">
 <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:0.5px;">${BRAND.name}</h1>
-<p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;">YOUR_TAGLINE</p>
+<p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;">A Little Piece of Ghana</p>
 </td></tr>
 
 <!-- Body -->
@@ -354,8 +354,8 @@ export async function sendOrderStatusUpdate(order: any, newStatus: string) {
 
     // Status icons/colors
     const statusConfig: Record<string, { icon: string; color: string; bg: string }> = {
-        processing: { icon: '&#9881;', color: '#2563eb', bg: '#eff6ff' },
-        shipped: { icon: '&#128666;', color: '#2563eb', bg: '#eff6ff' },
+        processing: { icon: '&#9881;', color: '#174D3C', bg: '#FFF8ED' },
+        shipped: { icon: '&#128666;', color: '#174D3C', bg: '#FFF8ED' },
         delivered: { icon: '&#127881;', color: '#16a34a', bg: '#f0fdf4' },
         cancelled: { icon: '&#10060;', color: '#dc2626', bg: '#fef2f2' },
     };

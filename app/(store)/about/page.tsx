@@ -5,6 +5,7 @@ import {
   SITE_TAGLINE,
   LOGO_PATH,
   BUSINESS_ADDRESS,
+  BUSINESS_CITY,
   BUSINESS_COUNTRY,
   ABOUT_BODY,
   CONTACT_PHONE_DISPLAY,
@@ -24,26 +25,26 @@ export default function AboutPage() {
   const values = [
     {
       icon: 'ri-award-line',
-      title: 'Quality Human Hair',
+      title: 'Authentic Craft',
       description:
-        'We choose ready-to-wear human hair that moves like yours, soft, natural, and made to last beyond one event.',
+        'Genuine Ghanaian pieces made by hand, sourced directly from the artisans who make them.',
     },
     {
       icon: 'ri-checkbox-circle-line',
-      title: 'Ready-to-Wear Confidence',
+      title: 'Gifts With a Story',
       description:
-        'Bob units, pixies and curls styled so you can put them on and walk out feeling polished, no salon day required.',
+        'Each gift comes with a little card about its maker and meaning, so it feels personal and memorable.',
     },
     {
       icon: 'ri-whatsapp-line',
       title: 'Easy Ordering',
       description:
-        `Call ${CONTACT_PHONE_DISPLAY} or message us on WhatsApp. We guide you from “which style?” to wearing it home with zero stress.`,
+        `Call ${CONTACT_PHONE_DISPLAY} or message us on WhatsApp. We help you choose the perfect gift and wrap it beautifully.`,
     },
     {
       icon: 'ri-truck-line',
-      title: 'Madina Delivery & Pickup',
-      description: `Pickup near Ritz Hotel in Madina, or delivery across Accra and ${BUSINESS_COUNTRY}. Your wig arrives ready for you.`,
+      title: 'Delivery & Pickup',
+      description: `Pickup in ${BUSINESS_CITY}, delivery across ${BUSINESS_COUNTRY}, and gifts sent to loved ones abroad.`,
     },
   ];
 
@@ -52,7 +53,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Our Story"
         title={`About ${SITE_NAME}`}
-        subtitle="Hair that helps you feel like yourself again, soft, ready-to-wear human hair in Madina near Ritz Hotel."
+        subtitle={SITE_TAGLINE}
       />
 
       <section className="py-20 bg-white overflow-hidden">
@@ -63,7 +64,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>{ABOUT_BODY}</p>
                 <p>
-                  We exist for the quiet moment before you leave the house, when the hair feels right, your shoulders drop, and you finally recognise yourself again.
+                  Akwaaba means “welcome” in Twi. It is how we want every customer to feel, whether you are shopping for a birthday in Accra, a wedding in Kumasi, or sending a little piece of home to family overseas.
                 </p>
                 <div className="pt-4">
                   <Link
@@ -110,9 +111,9 @@ export default function AboutPage() {
             <div className="w-16 h-16 bg-pink-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg">
               <i className="ri-shopping-bag-3-line text-3xl text-white"></i>
             </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready-to-Wear Wigs</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Handmade Ghanaian Gifts</h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Bob units, pixie cuts and curly wigs in quality human hair, ready the moment you put them on. Soft glam without the wait.
+              Woven baskets, beadwork, kente accessories, wooden crafts, handmade jewelry and home décor, presented in a fresh, modern way and ready to give.
             </p>
           </div>
           <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200">
@@ -121,7 +122,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Order Your Way</h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              WhatsApp us, call {CONTACT_PHONE_DISPLAY}, or walk in near Ritz Hotel in Madina. We make choosing, and wearing, your next look feel easy.
+              WhatsApp us, call {CONTACT_PHONE_DISPLAY}, or visit us at {BUSINESS_ADDRESS}. Corporate and bulk orders are always welcome.
             </p>
           </div>
         </div>
@@ -130,8 +131,8 @@ export default function AboutPage() {
       <div className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Women Choose {siteName}</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Soft hair. Quiet confidence. A version of you that feels ready.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Customers Choose {siteName}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Warm, authentic and thoughtful. A little piece of Ghana in every gift.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
@@ -149,16 +150,16 @@ export default function AboutPage() {
 
       <div className="bg-gradient-to-br from-pink-50 via-white to-pink-50 py-24 border-y border-pink-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-900">
-          <h2 className="text-4xl md:text-5xl font-serif mb-8">Ready to Feel Like You Again?</h2>
+          <h2 className="text-4xl md:text-5xl font-serif mb-8">Ready to Shop?</h2>
           <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Browse our styles, or WhatsApp us, leave feeling like yourself again, only softer.
+            Browse our handmade collection online, or message us on WhatsApp and we will help you choose.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center gap-3 bg-brand-plum text-brand-cream px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:bg-[#5C2349] hover:shadow-xl transform hover:-translate-y-1 transition-all"
+              className="inline-flex items-center justify-center gap-3 bg-brand-plum text-brand-cream px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:bg-[#1F6150] hover:shadow-xl transform hover:-translate-y-1 transition-all"
             >
-              Find your look
+              Shop gifts
               <i className="ri-arrow-right-line"></i>
             </Link>
             <a
